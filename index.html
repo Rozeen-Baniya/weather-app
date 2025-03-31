@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Landing Page</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            background: rgba(34, 33, 33, 0.7);
+            color: #fff;
+            border-radius: 20px;
+            padding: 40px 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            padding: 20px 40px;
+            background: #2e64a7;
+            color: #fff;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #342fbd;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <a href="weather.html" class="cta-button">Click to View Weather</a>
+    </div>
+    
+    <script>
+        // Set random background image for the landing page
+        const landingBackgrounds = [
+            'https://cdn.pixabay.com/photo/2024/02/26/20/48/landscape-8598886_1280.jpg',
+            'https://cdn.pixabay.com/photo/2015/08/30/11/17/shore-914149_1280.jpg',
+            'https://cdn.pixabay.com/photo/2023/12/20/07/04/clouds-8459053_1280.jpg',
+            'https://cdn.pixabay.com/photo/2021/10/26/06/36/sea-6742760_1280.jpg',
+            'https://cdn.pixabay.com/photo/2018/08/24/23/37/raindrops-3629132_1280.jpg'
+        ];
+
+        const randomBackground = landingBackgrounds[Math.floor(Math.random() * landingBackgrounds.length)];
+        document.body.style.backgroundImage = `url('${randomBackground}')`;
+    </script>
+</body>
+</html>
